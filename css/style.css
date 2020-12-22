@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+body{
+  font-family:'Ubunto', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: hsl(235, 16%, 14%);
+  background-image: url('../images/bg-stars.svg');
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.counter{
+  margin-top: 100px;
+}
+
+.counter h2{
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.countDown{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  flex-wrap: wrap;
+}
+
+.countDown> div {
+  width: 100px;
+  margin: 10px;
+}
+
+.number{
+  background-color:  hsl(236, 21%, 26%);
+  border-radius: 5px;
+  color: hsl(345, 95%, 68%);
+  box-shadow: 0px 5px 5px  hsl(234, 17%, 12%);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.number::before {
+    content: '';
+    position: absolute;
+    border-bottom: 1px #292e42 solid;
+    height: 200px;
+    width: 101px;
+    transform: translateY(-50%);
+}
+
+.countDown span{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.divider-hours {
+    float: left;
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 100px;
+}
+
+.clock-dot {
+    display: block;
+    background: #171626;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    border-radius: 50%;
+    left: 5px;
+}
+
+.clock-dot.top {
+   top: 15px;
+   left: -115px;
+   z-index: -1;
+}
+
+.clock-dot.bottom {
+    top: 15px;
+    left: -14px;
+    z-index: -1;
+}
+.footer {
+    background: url('../images/pattern-hills.svg') no-repeat;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+.footer img{
+  padding-left: 5px;
+  margin-top: 100px;
+}
+
+.attribution{
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.attribution a{
+    color: #ccc;
+}
+
+@media(min-width: 375px) and (max-width: 414px){
+  .countDown> div {
+    width: 74px;
+    margin: 0;
+  }
+  .number::before {
+    width: 73px;
+  }
+  .clock-dot.top {
+    left: -5px;
+  }
+  .divider-hours{
+    width: 15px;;
+  }
+  .clock-dot.bottom {
+    left: -79px;
+  }
+}
+
+@media screen and (orientation:landscape) {
+  .counter {
+   margin-top: 0;
+  }
+  .number{
+    height: 70px;
+  }
+}
