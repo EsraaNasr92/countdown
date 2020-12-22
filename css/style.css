@@ -136,7 +136,7 @@ body{
   }
 }
 
-@media screen and (orientation:landscape) {
+@media screen and (orientation:landscape) and (min-width: 319px) and (max-width: 815px)  {
   .counter {
    margin-top: 0;
   }
